@@ -24,9 +24,9 @@ requirements(){
     echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 
     sudo apt update -qq
-    sudo apt install -qq -y python3 python3-pip unzip mkisofs sshpass terraform packer mono-complete
+    sudo apt install -qq -y python3 python3-pip unzip mkisofs sshpass terraform packer mono-complete aria2
 
-    pip3 install ansible pywinrm jmespath
+    pip3 install ansible pywinrm jmespath --break-system-packages
     ansible-galaxy collection install community.windows microsoft.ad
 
 }
