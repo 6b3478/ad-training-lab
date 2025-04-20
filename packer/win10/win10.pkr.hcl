@@ -19,7 +19,7 @@ source "proxmox-iso" "traininglab-ws" {
 
   boot_iso {
     type            = "ide"
-    iso_url         = "https://software-static.download.prss.microsoft.com/dbazure/988969d5-f34g-4e03-ac9d-1f9786c66750/19045.2006.220908-0225.22h2_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso"
+    iso_urls         = ["iso/19045.2006.220908-0225.22h2_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso", "https://software-static.download.prss.microsoft.com/dbazure/988969d5-f34g-4e03-ac9d-1f9786c66750/19045.2006.220908-0225.22h2_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso"]
     unmount         = true
     iso_checksum    = "sha256:ef7312733a9f5d7d51cfa04ac497671995674ca5e1058d5164d6028f0938d668"
     iso_download_pve = true
@@ -49,7 +49,7 @@ source "proxmox-iso" "traininglab-ws" {
 
   additional_iso_files {
     type           = "sata"
-    iso_url          = "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso"
+    iso_urls          = ["iso/virtio-win.iso", "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso"]
     iso_checksum     = "sha256:57b0f6dc8dc92dc2ae8621f8b1bfbd8a873de9bedc788c4c4b305ea28acc77cd"
     iso_storage_pool = "local"
     unmount          = true
