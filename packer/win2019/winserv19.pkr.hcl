@@ -19,10 +19,8 @@ source "proxmox-iso" "traininglab-win2019" {
 
   boot_iso {
     type           = "ide"
-    iso_urls        = ["iso/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso", "https://software-download.microsoft.com/download/pr/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"]
+    iso_file       = "local:iso/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"
     unmount        = true
-    iso_checksum   = "sha256:549bca46c055157291be6c22a3aaaed8330e78ef4382c99ee82c896426a1cee1"
-    iso_download_pve = true
     iso_storage_pool = "local"
   }
   
@@ -49,10 +47,8 @@ source "proxmox-iso" "traininglab-win2019" {
 
   additional_iso_files {
     type           = "sata"
-    iso_urls          = ["iso/latest-virtio/virtio-win.iso", "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso"]
-    iso_checksum     = "sha256:57b0f6dc8dc92dc2ae8621f8b1bfbd8a873de9bedc788c4c4b305ea28acc77cd"
+    iso_file       = "local:iso/latest-virtio/virtio-win.iso"
     iso_storage_pool = "local"
-    iso_download_pve = true
     unmount          = true
   }
 
